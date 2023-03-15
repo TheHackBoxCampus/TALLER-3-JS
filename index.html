@@ -7,8 +7,24 @@
 	<script src="main.js" defer></script>
 </head>
 <body>
-	<h1>TRABAJO</h1>
-	<b><h2 class="">TALLER 3</h2></b>
+	<h1>Datos del Camper</h1>
+	
+	<fieldset>
+		<legend>Datos de la sede</legend>
+		<form id="form-campus">
+			Sede: <input type="text" name="sede" placeholder="Donde esta la sede: "> <br><br>
+			<input type="submit" value="Guardar Sede">
+		</form>
+	</fieldset><br>
+	<fieldset>
+		<legend>Informacion del Camper</legend>
+		<form id="form-trainer-camper">
+			Sede Seleccionada: <select name="sede_seleccionada"></select><br><br>
+			Nombre del camper: <input type="text" name="nombre" placeholder="nombre del camper"><br><br>
+			Telefono del Camper: <input type="tel" name="telefono" placeholder="Telefono del camper"><br> <br>
+			<input type="submit" value="Guarda informacion">
+		</form>
+	</fieldset>
 </body>
 </html>
 
