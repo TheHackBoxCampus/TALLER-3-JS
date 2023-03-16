@@ -1,0 +1,37 @@
+body {
+    background: rgb(136,12,105);
+    background: linear-gradient(90deg, rgba(136,12,105,1) 0%, rgba(121,9,111,1) 35%, rgb(32, 60, 169) 100%); 
+}
+fieldset {
+    margin: 1em;
+}
+h1{
+    text-align: center;
+    padding-top: 0.2em;
+}
+.container{ 
+    width: 60%;
+    margin: auto;
+    background-color: #fff;
+}
+
+input{ 
+    padding: 0.4em;
+    outline: none;
+}
+.ho{
+    position: relative;
+    padding: 0.6em;
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: rgb(72, 51, 208);
+    transition: 300ms ease;
+    z-index: 1;
+    cursor: pointer;
+}
+
+
+.ho:hover{
+    background-color: darkblue;
+}

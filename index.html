@@ -4,54 +4,60 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Taller 3</title>
+	<link rel="stylesheet" href="style.css">	
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
 	<script src="main.js" defer></script>
 </head>
 <body>
-	<h1>Datos del Camper</h1>
-	
-	<fieldset>
+	<div class="container">
+		<h1>Datos del Camper</h1>
+		<fieldset>
 		<legend>Datos de la sede</legend>
 		<form id="form-campus">
 			Sede: <input type="text" name="sede" placeholder="Donde esta la sede: "> <br><br>
-			<input type="submit" value="Guardar Sede">
+			<input type="submit" class="ho" value="Guardar Sede">
 		</form>
 	</fieldset><br>
-	<fieldset><br>
+	<fieldset ><br>
 		<legend>Informacion de los integrantes</legend>
 			<form id="form_usuarios">
-				Sede Seleccionada: <select name="sede_seleccionada"></select><br><br>
-				Nombre del camper: <input type="text" name="nombre" placeholder="nombre del camper"><br><br>
-				Telefono del Camper: <input type="tel" name="telefono" placeholder="Telefono del camper"><br> <br>
-				Team: <input type="text" name="team" placeholder="Cual es tu team?"><br><br>
-				Email: <input type="email" name="email" placeholder="Example@name.com"><br><br>
-				Horario de ingles: <input type="text" name="horario_ingles" placeholder="Horario de clases"><br><br>
-				Horario de Ser: <input type="text" name="horario_ser" placeholder="Horario de clases"><br><br>
-				Tecnologia: <input type="text" name="Tecnologia" placeholder="Tecnologia"><br><br>
-				Pre requisito: <input type="text" name="pre-requisito" placeholder="pre-requisito"> <br><br>
-				Selectiva u obligatoria: <input type="text" name="tipo" placeholder="Tipo">
+				Sede Seleccionada: <select name="sede_seleccionada" class="check"></select><br><br>
+				Nombre del camper: <input type="text" name="nombre" class="check" placeholder="nombre del camper"><br><br>
+				Telefono del Camper: <input type="tel" name="telefono" class="check" placeholder="Telefono del camper"><br> <br>
+				Team: <input type="text" name="team" class="check" placeholder="Cual es tu team?"><br><br>
+				Email: <input type="email" name="email" class="check" placeholder="Example@name.com"><br><br>
+				Horario de ingles: <input type="text" class="check" name="horario_ingles" placeholder="Horario de clases"><br><br>
+				Horario de Ser: <input type="text" class="check" name="horario_ser" placeholder="Horario de clases"><br><br>
+				Tecnologia: <input type="text" class="check" name="Tecnologia" placeholder="Tecnologia"><br><br>
+				Pre requisito: <input type="text" class="check" name="pre-requisito" placeholder="pre-requisito"> <br><br>
+				Selectiva u obligatoria: <input class="check" type="text" name="tipo" placeholder="Tipo">
 				<br><hr><br>
-				Nombre del trainer: <input type="text" name="nombre_trainer" placeholder="nombre del trainer"><br><br>
-				Telefono del trainer: <input type="tel" name="telefono_trainer" placeholder="Telefono del trainer"><br> <br>
-				Team: <input type="text" name="team_trainer" placeholder="Cual es tu team?"><br><br>
-				Email: <input type="email" name="email_trainer" placeholder="Example@name.com">
+				Nombre del trainer: <input type="text" class="check" name="nombre_trainer" placeholder="nombre del trainer"><br><br>
+				Telefono del trainer: <input type="tel" class="check" name="telefono_trainer" placeholder="Telefono del trainer"><br> <br>
+				Team: <input type="text" name="team_trainer" class="check" placeholder="Cual es tu team?"><br><br>
+				Email: <input type="email" name="email_trainer" class="check" placeholder="Example@name.com">
 				<br><hr>
-				Roadmap: <select name="ruta">
+				Roadmap: <select name="ruta" class="check">
 					<option>Backend</option>
 					<option>Frontend</option>
 				</select><br><br>
-				creditos: <select name="creditos">
+				creditos: <select name="creditos" class="check">
 					<option>5</option>
 					<option>10</option>
 				</select><br><br>
-				Año: <input type="date" name="año"><br><br>
-				Asignaturas: <select name="Asignaturas">
+				Año: <select name="año" class="check">
+					<option>2022</option>
+					<option>2023</option>
+					<option>2024</option>
+				</select><br><br>
+				Asignaturas: <select name="Asignaturas" class="check">
 					<option>4</option>
 					<option>5</option>
 				</select><br><br>
-				<input type="submit" value="Guardar Informacion">
+				<input type="submit" class="ho" value="Guardar Informacion">
 			</form>
 	</fieldset>
+	</div>
 </body>
 </html>
 
