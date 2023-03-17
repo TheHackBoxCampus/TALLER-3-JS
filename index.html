@@ -10,54 +10,79 @@
 </head>
 <body>
 	<div class="container">
-		<h1>Datos del Camper</h1>
+		<h1>Campus Land</h1>
 		<fieldset>
 		<legend>Datos de la sede</legend>
 		<form id="form-campus">
 			Sede: <input type="text" name="sede" placeholder="Donde esta la sede: "> <br><br>
+			Numero de la sede: <input type="number" name="contacto_sede"><br><br>
+			Direccion: <input type="text" name="direccion_sede"><br><br>
 			<input type="submit" class="ho" value="Guardar Sede">
 		</form>
 	</fieldset><br>
 	<fieldset ><br>
 		<legend>Informacion de los integrantes</legend>
 			<form id="form_usuarios">
-				Sede Seleccionada: <select name="sede_seleccionada" class="check"></select><br><br>
-				Nombre del camper: <input type="text" name="nombre" class="check" placeholder="nombre del camper"><br><br>
-				Telefono del Camper: <input type="tel" name="telefono" class="check" placeholder="Telefono del camper"><br> <br>
-				Team: <input type="text" name="team" class="check" placeholder="Cual es tu team?"><br><br>
-				Email: <input type="email" name="email" class="check" placeholder="Example@name.com"><br><br>
-				Horario de ingles: <input type="text" class="check" name="horario_ingles" placeholder="Horario de clases"><br><br>
-				Horario de Ser: <input type="text" class="check" name="horario_ser" placeholder="Horario de clases"><br><br>
-				Tecnologia: <input type="text" class="check" name="Tecnologia" placeholder="Tecnologia"><br><br>
-				Pre requisito: <input type="text" class="check" name="pre-requisito" placeholder="pre-requisito"> <br><br>
-				Selectiva u obligatoria: <input class="check" type="text" name="tipo" placeholder="Tipo">
+				Sede Seleccionada: <select name="sede_seleccionada"></select><br><br>
+				Nombre del camper: <input type="text" name="nombre" placeholder="nombre del camper"><br><br>
+				Telefono del Camper: <input type="tel" name="telefono" placeholder="Telefono del camper"><br> <br>
+				Team: <input type="text" name="team" placeholder="Cual es tu team?"><br><br>
+				Nombre del salon: <select name="nombre_salon">
+					<option>Sputnik</option>
+					<option>Artemis</option>
+					<option>Apolo</option>
+				</select><br><br>
+				Email: <input type="email" name="email" placeholder="Example@name.com"><br><br>
+				Horario de ingles: <select name="horario_ingles">
+					<option>10:00AM - 11:00AM</option>
+					<option>8:00AM - 9:00AM</option>
+				</select><br><br>
+				Horario de Ser: <select name="horario_ser">
+					<option>11:00AM - 12:00AM</option>
+					<option>9:00AM - 10:00AM</option>
+				</select><br><br>
+				Tecnologia: <input type="text"  name="Tecnologia" placeholder="Tecnologia"><br><br>
+				Pre requisito: <input type="text"  name="pre-requisito" placeholder="pre-requisito"> <br><br>
+				De Tipo: <select name="tipo">
+					<option>Selectiva</option>
+					<option>Obligatoria</option>
+				</select><br><br>
 				<br><hr><br>
-				Nombre del trainer: <input type="text" class="check" name="nombre_trainer" placeholder="nombre del trainer"><br><br>
-				Telefono del trainer: <input type="tel" class="check" name="telefono_trainer" placeholder="Telefono del trainer"><br> <br>
-				Team: <input type="text" name="team_trainer" class="check" placeholder="Cual es tu team?"><br><br>
-				Email: <input type="email" name="email_trainer" class="check" placeholder="Example@name.com">
-				<br><hr>
-				Roadmap: <select name="ruta" class="check">
+				Nombre del trainer: <input type="text"  name="nombre_trainer" placeholder="nombre del trainer"><br><br>
+				Telefono del trainer: <input type="tel"  name="telefono_trainer" placeholder="Telefono del trainer"><br> <br>
+				Team: <input type="text" name="team_trainer"  placeholder="Cual es tu team?"><br><br>
+				Email: <input type="email" name="email_trainer"  placeholder="Example@name.com"><br><br>
+				Tecnologia: <input type="text" name="Tecnologia_trainer" placeholder="Tecnologia"><br><br>
+			 	La Tecnologia es: <select name="tipo_tecnologia">
+					<option>Remota</option>
+					<option>Presencial</option>
+				</select><br><br>
+				La tecnologia cuenta: <select name="tipo_sandbox">
+					<option>Con sandbox</option>
+					<option>Sin sandbox</option>
+				</select><br><br>
+				<hr>
+				Roadmap: <select name="ruta">
 					<option>Backend</option>
 					<option>Frontend</option>
 				</select><br><br>
-				creditos: <select name="creditos" class="check">
+				creditos: <select name="creditos">
 					<option>5</option>
 					<option>10</option>
 				</select><br><br>
-				Año: <select name="año" class="check">
+				Año: <select name="año">
 					<option>2022</option>
 					<option>2023</option>
 					<option>2024</option>
 				</select><br><br>
-				Asignaturas: <select name="Asignaturas" class="check">
+				Asignaturas: <select name="Asignaturas">
 					<option>4</option>
 					<option>5</option>
 				</select><br><br>
 				<input type="submit" class="ho" value="Guardar Informacion">
 			</form>
 	</fieldset>
-	</div>
+</div>
 </body>
 </html>
 
