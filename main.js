@@ -101,5 +101,15 @@ const addPropertys = (event) => {
   );
 };
 
+// consulta con Destructuracion 
+const consulta = (CAMPUS) => {
+  let lugar = sede_seleccionada.value;
+  const {sedes:{Bucaramanga: {integrantes:[{Camper: [{nombre_salon}],Trainer:[{tipo_tecnologia}]}]}}} = CAMPUS
+  console.log(`La asignatura es: ${tipo_tecnologia} y el nombre del salon del camper es ${nombre_salon}` ); 
+}
+
 form_sede.addEventListener("submit", (e) => addInfo(e));
-form_info_members.addEventListener("submit", (e) => addPropertys(e));
+form_info_members.addEventListener("submit", (e) => {
+  addPropertys(e)
+  consulta(Campus); 
+});
