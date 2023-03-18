@@ -4,6 +4,7 @@ let form_info_members = document.querySelector("#form_usuarios");
 let sede_seleccionada = document.querySelector("[name='sede_seleccionada']");
 let tmp;
 let object_union;
+let consult; 
 
 const addInfo = (event) => {
   event.preventDefault();
@@ -14,7 +15,7 @@ const addInfo = (event) => {
     Campus["sedes"][sede] = { integrantes: [] };
     let info_contacto = {
         sede: sede,
-        contacto: data.contacto_sede,
+        numero: data.contacto_sede,
         direccion: data.direccion_sede,
     };
     Campus.sedes.contacto.unshift(info_contacto)
@@ -38,6 +39,7 @@ const addPropertys = (event) => {
   let data = Object.fromEntries(new FormData(event.target));
   if (Campus["sedes"][sede_seleccionada.value] != undefined) {
     tmp = [];
+    consult = sede_seleccionada.value; 
     Object.entries(data).forEach((info) => {
       let atpm = Object.fromEntries([info]);
       tmp.push(atpm);
@@ -102,14 +104,24 @@ const addPropertys = (event) => {
 };
 
 // consulta con Destructuracion 
-const consulta = (CAMPUS) => {
-  let lugar = sede_seleccionada.value;
-  const {sedes:{Bucaramanga: {integrantes:[{Camper: [{nombre_salon}],Trainer:[{tipo_tecnologia}]}]}}} = CAMPUS
-  console.log(`La asignatura es: ${tipo_tecnologia} y el nombre del salon del camper es ${nombre_salon}` ); 
+const destructuring_consult = (CAMPUS) => {
+  const {sedes:{[consult]:{integrantes:[{Camper: [{nombre_salon, nombre}],Trainer:[{tipo_tecnologia, tipo_sandbox}]}]}, contacto: [{numero, direccion}]}} = CAMPUS
+
+  console.log(`La asignatura se realiza de forma: ${tipo_tecnologia}, el nombre del camper es ${nombre} del salon ${nombre_salon} de la sede: ${consult} y es de tipo: ${tipo_sandbox}
+  ` ); 
+
+  console.log(`el numero de la sede es ${numero} y su direccion ${direccion}`)
+}
+// consulta con sintaxis de punto 
+const point_consult = (CAMPUS) => {
+  let credits = CAMPUS.sedes[`${consult}`].integrantes[0].RoadMap[0].creditos;
+  let pre_requeriment = CAMPUS.sedes[`${consult}`].integrantes[0].nivel[0].pre_requisito; 
+  console.log(`Cuenta con el pre-requisito de ${pre_requeriment} con unos creditos de ${credits}`)
 }
 
 form_sede.addEventListener("submit", (e) => addInfo(e));
 form_info_members.addEventListener("submit", (e) => {
   addPropertys(e)
-  consulta(Campus); 
+  destructuring_consult(Campus); 
+  point_consult(Campus); 
 });
